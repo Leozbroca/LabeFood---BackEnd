@@ -1,0 +1,42 @@
+### Cadastro de usuário 
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "name": "Leonardo Broca",
+    "email": "leozbroca@gmail.com",
+    "cpf": "123.456.789-00",
+    "password": "123"
+}
+
+### Login
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email":"leozbroca@gmail.com",
+    "password":"123"
+}
+
+### Editar Usuário
+PUT http://localhost:3003/user/edit
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiNmMwNGJlLTdlMzItNDc0OC1iZTliLTkzMmZjNjNhMjJiZCIsImlhdCI6MTY0NjYwNTk5NCwiZXhwIjoxNjQ2NjkyMzk0fQ.g2TJtW98QWOf2RsgRY7JugAeZ3JCNHLl52rya0DpC6A
+
+{
+    "name":"Leonardo Broca da Silva",
+    "email":"leozbroca@gmail.com",
+    "cpf":"123.456.789-99",
+    "password":"123"
+}
+
+### Cadastrar endereço
+POST http://localhost:3003/user/address
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiNmMwNGJlLTdlMzItNDc0OC1iZTliLTkzMmZjNjNhMjJiZCIsImlhdCI6MTY0NjYwNTk5NCwiZXhwIjoxNjQ2NjkyMzk0fQ.g2TJtW98QWOf2RsgRY7JugAeZ3JCNHLl52rya0DpC6A
+
+{
+    "cep":"12506210",
+    "number":"90",
+    "complement":"1"
+}
